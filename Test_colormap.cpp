@@ -15,7 +15,7 @@ std::string readExpectedOutputFromCSV(const std::string& filename) {
     std::ifstream csvFile(filename);
     std::ostringstream expectedOutput;
     std::string line;
-    if(!csvFile.good()) {
+    if (!csvFile.good()) {
         throw std::runtime_error("Could not open file " + filename);
     }
     while (std::getline(csvFile, line)) {

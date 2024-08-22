@@ -17,4 +17,4 @@ std::string Report(const IWeatherSensor& sensor) {
     return report;
 }
 
-} // namespace WeatherSpace
+}  // namespace WeatherSpace
