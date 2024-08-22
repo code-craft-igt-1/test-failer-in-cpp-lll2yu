@@ -19,6 +19,9 @@ std::string readExpectedOutputFromCSV(const std::string& filename) {
         throw std::runtime_error("Could not open file " + filename);
     }
     while (std::getline(csvFile, line)) {
+        if (!line.empty() && line.back() == '\r') {
+            line.pop_back();
+        }
         expectedOutput << line << "\n";
     }
     return expectedOutput.str();
